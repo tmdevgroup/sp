@@ -326,6 +326,7 @@
   align-items: center;
   padding: 0 10vw;
   color: #fff;
+  color-opacity: 0.6;
 }
 .contact .col-md-5, .contact .col-md-7 {
   padding: 0;
@@ -914,6 +915,10 @@ img {
     padding-top: 12vw;
     font-size: 2vw;
   }
+
+  .contact {
+    padding-top: 10vw;
+  }
 }
 @media screen and (max-width: 575px) {
   .main-header.scrolled {
@@ -973,9 +978,17 @@ img {
   .production_content {
     order: 2;
   }
+
+  .contact {
+    padding-top: 16vw;
+  }
 }
 @media screen and (max-width: 350px) {
   .card_content {
     font-size: 4.5vw;
+  }
+
+  .contact {
+    padding-top: 20vw;
   }
 }
