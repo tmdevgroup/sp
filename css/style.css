@@ -455,6 +455,23 @@ img {
   max-width: 100%;
 }
 
+.btn {
+  padding: 7px 30px;
+  display: inline-block;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+.btn-primary {
+  background-color: #1EB4E8;
+  border-bottom: 5px solid #1493bf;
+}
+.btn-primary:hover {
+  background-color: #4cc3ed;
+}
+
 .section_about {
   height: 100%;
   width: 100%;
@@ -479,13 +496,19 @@ img {
   margin: 0 auto;
 }
 .section_about .section_about-content {
-  margin-top: 2%;
   text-align: center;
 }
 .section_about .section_about-content .section_about-text {
   width: 100%;
+  margin: 0;
+}
+.section_about .section_about-content .section_about-text a {
+  margin: 0;
 }
 .section_about .section_about-content .section_about-text p {
+  position: relative;
+  margin: 0;
+  font-weight: 700;
   margin-bottom: 4%;
   font-size: 1.1em;
 }
@@ -493,13 +516,6 @@ img {
   font-size: 1.25em;
   font-weight: 700;
   color: #1EB4E8;
-}
-.section_about .section_about-content .section_about-text .btn {
-  align-items: center;
-  padding: 10px;
-  text-decoration: none;
-  color: #09213A;
-  background-color: rgba(9, 33, 58, 0.5);
 }
 .section_about .section_img {
   display: inline-block;
@@ -575,6 +591,16 @@ img {
   color: #1EB4E8;
 }
 
+.fa-award, .fa-clipboard-list {
+  width: 30%;
+  color: #1EB4E8;
+}
+
+.fa-chart-line {
+  width: 40%;
+  color: #1EB4E8;
+}
+
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -605,7 +631,7 @@ img {
 .card_items {
   height: 500px;
   margin: 10px;
-  padding: 30px 30px 10px;
+  padding: 25px 25px 10px;
   background: #ebf5fc;
   box-shadow: -6px -6px 20px #e1e1e1, 6px 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 40px;
@@ -622,20 +648,22 @@ img {
 }
 .card_content {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 .card_content i {
   color: #1EB4E8;
 }
 .card_content h2 {
-  color: #09213A;
+  text-align: center;
+  color: #1EB4E8;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   font-weight: 700;
 }
 .card_content p {
+  font-size: 1em;
   color: #09213A;
 }
 
@@ -791,8 +819,16 @@ img {
 }
 
 @media screen and (max-width: 1199px) {
+  .card_content p {
+    font-size: 0.9em;
+  }
+
   .specification_content p {
     font-size: 0.9em;
+  }
+
+  .section_about-text {
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 992px) {
@@ -901,8 +937,20 @@ img {
   .products_table td {
     font-size: 1.2vw;
   }
+
+  .card_content p {
+    font-size: 1em;
+  }
+
+  .section_about-text {
+    font-size: 0.5em;
+  }
 }
 @media screen and (max-width: 768px) {
+  .cards_icon {
+    width: 30%;
+  }
+
   .section_about-text {
     font-size: 1.2vw;
   }
