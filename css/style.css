@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "fontello";
-  src: url("../fonts/fontello.eot?98370892");
-  src: url("../fonts/fontello.eot?98370892#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?98370892") format("woff2"), url("../fonts/fontello.woff?98370892") format("woff"), url("../fonts/fontello.ttf?98370892") format("truetype"), url("../fonts/fontello.svg?98370892#fontello") format("svg");
+  src: url("../fonts/fontello.eot?43713417");
+  src: url("../fonts/fontello.eot?43713417#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?43713417") format("woff2"), url("../fonts/fontello.woff?43713417") format("woff"), url("../fonts/fontello.ttf?43713417") format("truetype"), url("../fonts/fontello.svg?43713417#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +12,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?98370892#fontello') format('svg');
+    src: url('../font/fontello.svg?43713417#fontello') format('svg');
   }
 }
 */
@@ -44,6 +44,11 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-quote-left-alt:before {
+  content: "";
+}
+
+/* '' */
 .icon-ok:before {
   content: "";
 }
@@ -64,31 +69,26 @@
 }
 
 /* '' */
-.icon-facebook:before {
-  content: "";
+.icon-quote-right-alt:before {
+  content: "";
 }
 
-/* '' */
+/* '' */
+.icon-quote-left:before {
+  content: "";
+}
+
+/* '' */
+.icon-quote-right:before {
+  content: "";
+}
+
+/* '' */
 .icon-youtube-play:before {
   content: "";
 }
 
 /* '' */
-.icon-instagram:before {
-  content: "";
-}
-
-/* '' */
-.icon-vkontakte:before {
-  content: "";
-}
-
-/* '' */
-.icon-google:before {
-  content: "";
-}
-
-/* '' */
 .main-header {
   position: fixed;
   display: flex;
@@ -280,11 +280,20 @@
   z-index: 0;
 }
 .fullscreen .title {
-  width: 500px;
-  font-size: 1em;
+  position: relative;
 }
 .fullscreen .title h1 {
-  color: #1EB4E8;
+  letter-spacing: 1px;
+  font-size: 25px;
+}
+.fullscreen .title h2 {
+  font-size: 25px;
+}
+.fullscreen img {
+  width: 100%;
+}
+.fullscreen .fullscreen-col {
+  padding: 0;
 }
 
 .lang-menu {
@@ -361,6 +370,19 @@
   background-image: url(https://www.countryflags.io/tm/shiny/24.png);
 }
 
+.nav-link-production {
+  position: relative;
+}
+.nav-link-production::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 84%;
+  left: 6%;
+  height: 3px;
+  background-color: #1EB4E8;
+}
+
 .products {
   display: flex;
 }
@@ -410,6 +432,27 @@
 }
 .products_table span {
   font-weight: 700;
+}
+
+.download-catalog {
+  margin-top: 50px;
+  text-align: center;
+}
+.download-catalog h2 {
+  margin-bottom: 10px;
+}
+
+.nav-link-contacts {
+  position: relative;
+}
+.nav-link-contacts::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 76%;
+  left: 9%;
+  height: 3px;
+  background-color: #1EB4E8;
 }
 
 .contact {
@@ -514,6 +557,19 @@
   font-style: 14px;
   line-height: 22px;
   background-color: rgba(30, 180, 232, 0.2);
+}
+
+.nav-link-about {
+  position: relative;
+}
+.nav-link-about::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 62%;
+  left: 15%;
+  height: 3px;
+  background-color: #1EB4E8;
 }
 
 .video {
@@ -778,6 +834,10 @@
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+.wrap-card .certificate-card .front span, .wrap-card .certificate-card .back span {
+  text-align: center;
+  font-weight: 700;
+}
 .wrap-card .certificate-card .front {
   background-color: #fff;
 }
@@ -786,7 +846,7 @@
   width: 300px;
 }
 .wrap-card .certificate-card .back {
-  background-color: #1EB4E8;
+  background-color: #fff;
   transform: rotateY(180deg);
 }
 
@@ -901,7 +961,7 @@ img {
   font-weight: 700;
   outline: none;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   background: #09213A;
   opacity: 0.9;
 }
@@ -1183,21 +1243,26 @@ img {
   padding: 59px 0;
   color: #fff;
 }
-.footer_contacts {
-  margin-top: 20px;
+.footer_adress, .footer_tel, .footer_mail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
-.footer_contacts .footer-tel {
-  font-weight: 400;
-  font-size: 20px;
-  color: #1EB4E8;
-}
-.footer_contacts p {
-  margin-bottom: 14px;
-  margin-top: 10px;
-}
-.footer_contacts a {
-  color: #1EB4E8;
+.footer_adress a, .footer_tel a, .footer_mail a {
   text-decoration: none;
+  color: #1EB4E8;
+}
+.footer_adress i, .footer_tel i, .footer_mail i {
+  font-size: 25px;
+  color: #1EB4E8;
+}
+.footer_adress p, .footer_tel p, .footer_mail p {
+  margin-left: 20px;
+}
+.footer_adress .footer-email, .footer_tel .footer-email, .footer_mail .footer-email {
+  display: flex;
+  margin-bottom: 5px;
 }
 .footer_social-links ul {
   padding: 0;
@@ -1221,18 +1286,6 @@ img {
 }
 .footer_social-links li a i {
   font-size: 20px;
-}
-
-.a-facebook :hover {
-  color: #3b5998;
-}
-
-.a-vkontakte :hover {
-  color: #597da3;
-}
-
-.a-instagram :hover {
-  color: #c13584;
 }
 
 .a-youtube :hover {
@@ -1275,6 +1328,17 @@ img {
 .footer-small_menu {
   text-align: center;
   list-style: none;
+}
+
+.footer_info-small {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.footer_info-small i {
+  font-size: 20px;
+}
+.footer_info-small a {
+  font-size: 13px;
 }
 
 .form {
@@ -1343,16 +1407,31 @@ img {
   }
 }
 @media screen and (max-width: 992px) {
+  .nav-link-production::after, .nav-link-contacts::after, .nav-link-about::after {
+    display: none;
+  }
+
   .fullscreen {
     min-height: 50vh;
+  }
+  .fullscreen .title h1 {
+    font-size: 16px;
+  }
+  .fullscreen .title h2 {
+    font-size: 16px;
   }
   .fullscreen::before {
     min-height: 50vh;
     bottom: 50%;
   }
-  .fullscreen .title {
-    width: 300px;
-    font-size: 0.6em;
+  .fullscreen img {
+    width: 80%;
+  }
+  .fullscreen .title-desktop {
+    display: none;
+  }
+  .fullscreen .title-mobile {
+    display: block;
   }
 
   .main-header .menu-icon {
@@ -1604,9 +1683,15 @@ img {
   }
 }
 @media screen and (max-width: 575px) {
-  .fullscreen .title {
-    width: 200px;
-    font-size: 0.4em;
+  .fullscreen .title h1 {
+    font-size: 12px;
+  }
+  .fullscreen .title h2 {
+    font-size: 12px;
+  }
+
+  .title-mobile {
+    font-size: 12px;
   }
 
   .specification_content {
@@ -1667,7 +1752,14 @@ img {
     padding-top: 16vw;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
+  .fullscreen .title h1 {
+    font-size: 10px;
+  }
+  .fullscreen .title h2 {
+    font-size: 8px;
+  }
+
   .card_content {
     font-size: 4.5vw;
   }
