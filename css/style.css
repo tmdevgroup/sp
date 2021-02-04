@@ -281,19 +281,10 @@
 }
 .fullscreen .title {
   position: relative;
+  text-align: justify;
 }
 .fullscreen .title h1 {
   letter-spacing: 1px;
-  font-size: 25px;
-}
-.fullscreen .title h2 {
-  font-size: 25px;
-}
-.fullscreen img {
-  width: 100%;
-}
-.fullscreen .fullscreen-col {
-  padding: 0;
 }
 
 .lang-menu {
