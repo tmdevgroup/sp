@@ -98,7 +98,7 @@
   height: 65px;
   width: 100vw;
   padding: 2vw 10vw;
-  color: #1EB4E8;
+  color: #09213A;
   z-index: 1;
   transition: 0.4s ease-out;
 }
@@ -255,8 +255,8 @@
   }
 }
 .fullscreen {
-  min-height: 100vh;
-  background: url("../img/index/header.jpg");
+  min-height: 80vh;
+  background: url("../img/index/panarama.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -267,23 +267,14 @@
   color: #fff;
   z-index: -1;
 }
-.fullscreen::before {
-  content: "";
-  display: block;
-  position: absolute;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(9, 33, 58, 0.6);
-  z-index: 0;
-}
 .fullscreen .title {
   position: relative;
 }
 .fullscreen .title h1 {
+  margin-top: 55%;
+  font-size: 20px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .lang-menu {
@@ -329,7 +320,7 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.lang-menu .selected-lang {
+.lang-menu .selected-lang, .lang-menu .selected-lang_tm {
   display: flex;
   align-items: center;
   text-align: center;
@@ -337,13 +328,12 @@
   font-weight: 700;
   font-size: 16px;
 }
-.lang-menu .selected-lang:before {
+.lang-menu .selected-lang:before, .lang-menu .selected-lang_tm:before {
   content: "";
   display: inline-block;
   width: 24px;
   height: 24px;
   margin: 1px 5px 0 0;
-  background-image: url(https://www.countryflags.io/ru/shiny/32.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -352,12 +342,36 @@
   display: block;
 }
 
+.ru:before {
+  background-image: url(https://www.countryflags.io/ru/shiny/24.png);
+}
+
 .en:before {
   background-image: url(https://www.countryflags.io/us/shiny/24.png);
 }
 
 .tm:before {
   background-image: url(https://www.countryflags.io/tm/shiny/24.png);
+}
+
+.tr:before {
+  background-image: url(https://www.countryflags.io/tr/shiny/24.png);
+}
+
+.selected-lang:before {
+  background-image: url(https://www.countryflags.io/ru/shiny/24.png);
+}
+
+.selected-lang_tm:before {
+  background-image: url(https://www.countryflags.io/tm/shiny/24.png);
+}
+
+.selected-lang_eng:before {
+  background-image: url(https://www.countryflags.io/us/shiny/24.png);
+}
+
+.selected-lang_tr:before {
+  background-image: url(https://www.countryflags.io/tr/shiny/24.png);
 }
 
 .nav-link-production {
@@ -424,8 +438,31 @@
   font-weight: 700;
 }
 
+.wrap-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 30px 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap-card .certificate-card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px;
+  margin-left: 30px;
+  transition: 0.5s;
+}
+.wrap-card .certificate-card:hover {
+  width: 300px;
+  height: 400px;
+}
+
 .download-catalog {
-  margin-top: 50px;
   text-align: center;
 }
 .download-catalog h2 {
@@ -791,61 +828,6 @@
 
 .achievements_items p {
   font-size: 18px;
-}
-
-.wrap-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 30px 0;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.wrap-card .certificate-card {
-  width: 200px;
-  height: 300px;
-  position: relative;
-  perspective: 1000px;
-  margin-left: 30px;
-}
-.wrap-card .certificate-card .front, .wrap-card .certificate-card .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-.wrap-card .certificate-card .front span, .wrap-card .certificate-card .back span {
-  text-align: center;
-  font-weight: 700;
-}
-.wrap-card .certificate-card .front {
-  background-color: #fff;
-}
-.wrap-card .certificate-card .front img {
-  height: 300px;
-  width: 300px;
-}
-.wrap-card .certificate-card .back {
-  background-color: #fff;
-  transform: rotateY(180deg);
-}
-
-.certificate-card:hover .front {
-  transform: rotateY(180deg);
-}
-
-.certificate-card:hover .back {
-  transform: rotateY(360deg);
 }
 
 .content {
