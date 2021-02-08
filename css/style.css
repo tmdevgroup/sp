@@ -320,7 +320,7 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.lang-menu .selected-lang, .lang-menu .selected-lang_tm {
+.lang-menu .selected-lang, .lang-menu .selected-lang_tm, .lang-menu .selected-lang_eng, .lang-menu .selected-lang_tr {
   display: flex;
   align-items: center;
   text-align: center;
@@ -328,7 +328,7 @@
   font-weight: 700;
   font-size: 16px;
 }
-.lang-menu .selected-lang:before, .lang-menu .selected-lang_tm:before {
+.lang-menu .selected-lang:before, .lang-menu .selected-lang_tm:before, .lang-menu .selected-lang_eng:before, .lang-menu .selected-lang_tr:before {
   content: "";
   display: inline-block;
   width: 24px;
