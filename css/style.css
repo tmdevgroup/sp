@@ -98,7 +98,7 @@
   height: 65px;
   width: 100vw;
   padding: 2vw 10vw;
-  color: #09213A;
+  color: #fff;
   z-index: 1;
   transition: 0.4s ease-out;
 }
@@ -457,10 +457,6 @@
   margin-left: 30px;
   transition: 0.5s;
 }
-.wrap-card .certificate-card:hover {
-  width: 300px;
-  height: 400px;
-}
 
 .download-catalog {
   text-align: center;
@@ -792,7 +788,7 @@
   z-index: -1;
 }
 .achievements_items img {
-  width: 25%;
+  width: 100%;
 }
 .achievements_first p {
   padding-right: 10px;
@@ -922,6 +918,11 @@ h1, h2, h3, h4, h5, h6 {
 
 img {
   max-width: 100%;
+}
+
+.body_products {
+  background: #ebecf0;
+  background: linear-gradient(42deg, #ebecf0 0%, #ebecf0 75%, rgba(30, 180, 232, 0.9892331933) 100%);
 }
 
 .btn {
@@ -1201,12 +1202,21 @@ img {
 .terms_img {
   height: 500px;
   align-items: center;
-  background-color: #09213A;
+  background: url("../img/index/term.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.terms_img img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
+.terms_img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 33, 58, 0.6);
+  z-index: 0;
 }
 
 .footer {
