@@ -271,7 +271,7 @@
   position: relative;
 }
 .fullscreen .title h1 {
-  margin-top: 55%;
+  margin-top: 55vh;
   font-size: 20px;
   letter-spacing: 1px;
   text-align: center;
@@ -336,6 +336,10 @@
   margin: 1px 5px 0 0;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.nav-link_tm, .nav-link_tr, .nav-link_eng {
+  display: none;
 }
 
 .lang-menu:hover ul {
@@ -1389,6 +1393,41 @@ img {
   }
 }
 @media screen and (max-width: 992px) {
+  .nav-link_tm, .nav-link_tr, .nav-link_eng {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+  }
+  .nav-link_tm a, .nav-link_tr a, .nav-link_eng a {
+    text-decoration: none;
+    width: 40px;
+    padding: 5px 0;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .nav-link_tm a:before, .nav-link_tr a:before, .nav-link_eng a:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .nav-link_eng {
+    left: 45%;
+    z-index: 2;
+  }
+
+  .nav-link_tr {
+    left: 55%;
+    z-index: 2;
+  }
+
   .nav-link-production::after, .nav-link-contacts::after, .nav-link-about::after {
     display: none;
   }
@@ -1398,22 +1437,7 @@ img {
   }
   .fullscreen .title h1 {
     font-size: 16px;
-  }
-  .fullscreen .title h2 {
-    font-size: 16px;
-  }
-  .fullscreen::before {
-    min-height: 50vh;
-    bottom: 50%;
-  }
-  .fullscreen img {
-    width: 80%;
-  }
-  .fullscreen .title-desktop {
-    display: none;
-  }
-  .fullscreen .title-mobile {
-    display: block;
+    margin-top: 40vh;
   }
 
   .main-header .menu-icon {
@@ -1665,14 +1689,10 @@ img {
   }
 }
 @media screen and (max-width: 575px) {
+  .fullscreen .title {
+    margin-top: 40vh;
+  }
   .fullscreen .title h1 {
-    font-size: 12px;
-  }
-  .fullscreen .title h2 {
-    font-size: 12px;
-  }
-
-  .title-mobile {
     font-size: 12px;
   }
 
@@ -1735,11 +1755,11 @@ img {
   }
 }
 @media screen and (max-width: 360px) {
+  .fullscreen .title {
+    margin-top: 30vh;
+  }
   .fullscreen .title h1 {
     font-size: 10px;
-  }
-  .fullscreen .title h2 {
-    font-size: 8px;
   }
 
   .card_content {
